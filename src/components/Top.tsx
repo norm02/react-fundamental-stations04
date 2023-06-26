@@ -18,7 +18,10 @@ export const Top = () => {
   return (
     <div>
       <TopContainer>
-        <PortfolioText src="./images/portfolio-text.svg" alt="Text" />
+        <PortfolioText
+          src="https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/portfolio-text.svg"
+          alt="Text"
+        />
       </TopContainer>
     </div>
   );

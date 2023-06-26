@@ -27,7 +27,12 @@ export const Header = () => {
     <div>
       <HeaderContainer>
         <HeaderBar>
-          <Logo src={"./images/logo2.png"} alt="logo" />
+          <Logo
+            src={
+              "https://github.com/norm02/react-portfolio/blob/main/public/images/logo2.png?raw=true"
+            }
+            alt="logo"
+          />
           <SideMenu />
         </HeaderBar>
       </HeaderContainer>

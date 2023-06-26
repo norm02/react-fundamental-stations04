@@ -38,7 +38,14 @@ export const SideMenu = () => {
       <Menu
         right
         width={200}
-        customBurgerIcon={<img src={"./images/log-menu.svg"} alt="menu" />}
+        customBurgerIcon={
+          <img
+            src={
+              "https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/logo-menu.svg"
+            }
+            alt="menu"
+          />
+        }
       >
         <MenuList>
           <MenuItem>
