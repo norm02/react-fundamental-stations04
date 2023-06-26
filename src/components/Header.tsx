@@ -27,7 +27,7 @@ export const Header = () => {
     <div>
       <HeaderContainer>
         <HeaderBar>
-          <Logo src="./react-self-introduction//logo2.png" alt="logo" />
+          <Logo src={"./images/logo2.png"} alt="logo" />
           <SideMenu />
         </HeaderBar>
       </HeaderContainer>

@@ -38,7 +38,7 @@ export const Footer = () => {
     <div>
       <FooterBar>
         <CenterFooterUpward
-          src="./react-self-introduction/logo-upwards.svg"
+          src="./images/logo-upwards.svg"
           alt="upward"
           onClick={handleClick}
           style={{ display: isTop ? "none" : "block" }}

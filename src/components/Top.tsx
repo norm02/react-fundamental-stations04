@@ -18,7 +18,7 @@ export const Top = () => {
   return (
     <div>
       <TopContainer>
-        <PortfolioText src="/src/images/portfolio-text.svg" alt="Text" />
+        <PortfolioText src="./images/portfolio-text.svg" alt="Text" />
       </TopContainer>
     </div>
   );
