@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useState } from "react";
 
 const FooterBar = styled.header`
   height: 5rem;
@@ -19,20 +18,13 @@ const CenterFooterUpward = styled.img`
     cursor: pointer;
     top: -5px;
   }
+  display: block;
 `;
 
 export const Footer = () => {
-  const [isTop, setIsTop] = useState<boolean>(true);
-
-  const handleScroll = () => {
-    setIsTop(true);
-  };
-
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  window.addEventListener("scroll", handleScroll);
 
   return (
     <div>
@@ -41,7 +33,6 @@ export const Footer = () => {
           src="https://raw.githubusercontent.com/norm02/react-portfolio/d5099dfe869b6ac91cf16b9b232a02dc3be6d47a/public/images/logo-upwards.svg"
           alt="upward"
           onClick={handleClick}
-          style={{ display: isTop ? "block" : "block" }}
         />
       </FooterBar>
     </div>
