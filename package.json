@@ -51,7 +51,7 @@
     "watch": "webpack -w",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "browserslist": {
     "production": [
