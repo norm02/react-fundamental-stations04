@@ -32,10 +32,15 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx"],
+    extensions: [".ts", ".tsx", ".js"],
+    modules: ["node_modules"],
     fallback: {
       zlib: require.resolve("browserify-zlib"),
       querystring: require.resolve("querystring-es3"),
