@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SideMenu } from "../components/SideMenu";
+import { SideMenu } from "./SideMenu";
 
 const HeaderContainer = styled.header`
   background-color: #ffffff;

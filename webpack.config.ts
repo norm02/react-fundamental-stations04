@@ -3,7 +3,7 @@ module.exports = {
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: "production",
   // メインとなるJavaScriptファイル（エントリーポイント）
-  entry: "./server/index.js",
+  entry: "./src/server/index.tsx",
   // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
@@ -14,8 +14,8 @@ module.exports = {
   module: {
     rules: [
       {
-        // 拡張子 .tsx の場合
-        test: /\.tsx?$/,
+        test: [/\.tsx$/],
+        exclude: /node_modules/,
         use: [
           {
             // Babel を利用する
@@ -35,7 +35,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx"],
     fallback: {
       zlib: require.resolve("browserify-zlib"),
       querystring: require.resolve("querystring-es3"),
