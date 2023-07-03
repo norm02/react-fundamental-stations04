@@ -8,6 +8,7 @@ module.exports = {
   output: {
     //  出力ファイルのディレクトリ名
     path: `${__dirname}/dist`,
+    publicPath: "/",
     // 出力ファイル名
     filename: "main.js",
   },
