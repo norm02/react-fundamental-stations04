@@ -14,9 +14,13 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     // 出力ファイル名
     filename: "main.js",
+    libraryTarget: "umd",
     chunkLoading: false,
     wasmLoading: false,
     chunkFormat: "commonjs",
+  },
+  optimization: {
+    minimize: false,
   },
   experiments: {
     outputModule: true,
