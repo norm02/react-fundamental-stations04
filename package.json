@@ -29,6 +29,7 @@
     "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
     "i": "^0.3.7",
+    "jsx-runtime": "^1.2.0",
     "mime": "^3.0.0",
     "net": "^1.0.2",
     "npm": "^9.7.2",
@@ -44,12 +45,11 @@
     "styled-components": "^6.0.0-rc.6",
     "url": "^0.11.1",
     "util": "^0.12.5",
-    "web-vitals": "^3.3.2",
     "webpack-package-loaders-plugin": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.ts",
     "watch": "webpack -w",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -73,12 +73,13 @@
     "@babel/preset-react": "^7.22.5",
     "@types/express": "^4.17.17",
     "@types/react-burger-menu": "^2.8.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6",
-    "web-vitals": "^3.3.2",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
   }

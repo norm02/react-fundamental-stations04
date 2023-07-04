@@ -1,24 +1,30 @@
 import path from "path";
 import CopyWebpackPlugin from "copy-webpack-plugin";
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: "production",
   // メインとなるJavaScriptファイル（エントリーポイント）
-  entry: "./src/server/index.tsx",
+  entry: "./src/client/index.tsx",
   // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
     path: path.resolve(__dirname, "build"),
     // 出力ファイル名
     filename: "main.js",
+    chunkLoading: false,
+    wasmLoading: false,
+    chunkFormat: "commonjs",
+  },
+  experiments: {
+    outputModule: true,
   },
   module: {
     rules: [
       {
-        test: [/\.tsx$/],
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: [
           {
@@ -43,7 +49,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
     modules: ["node_modules"],
     fallback: {
       zlib: require.resolve("browserify-zlib"),
@@ -60,7 +66,7 @@ module.exports = {
       async_hooks: require.resolve("async"),
     },
   },
-  target: ["node"],
+  target: ["node", "es5"],
   devServer: {
     contentBase: path.join(__dirname, "public"),
     compress: true,
@@ -75,10 +81,6 @@ module.exports = {
           globOptions: {
             ignore: ["**/index.html"],
           },
-        },
-        {
-          from: path.resolve(__dirname, "src/client"),
-          to: path.resolve(__dirname, "build/client"),
         },
       ],
     }),
