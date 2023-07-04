@@ -10,7 +10,7 @@ const port = process.env.PORT || 9000;
 
 app.get("/", (req, res) => {
   const appContent = ReactDOMServer.renderToString(<App />);
-  const indexFile = path.resolve("./pubilc/index.html");
+  const indexFile = path.resolve("./build/index.html");
 
   fs.readFile(indexFile, "utf8", (err, data) => {
     if (err) {
@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use(express.static("dist"));
+app.use(express.static("./build"));
 
 app.listen(port, () => {
   console.log(`listening on *:${port}`);

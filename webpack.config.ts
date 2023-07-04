@@ -1,3 +1,7 @@
+import path from "path";
+import CopyWebpackPlugin from "copy-webpack-plugin";
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
@@ -7,8 +11,7 @@ module.exports = {
   // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
-    path: `${__dirname}/dist`,
-    publicPath: "/",
+    path: path.resolve(__dirname, "build"),
     // 出力ファイル名
     filename: "main.js",
   },
@@ -58,4 +61,30 @@ module.exports = {
     },
   },
   target: ["node"],
+  devServer: {
+    contentBase: path.join(__dirname, "public"),
+    compress: true,
+    port: 9000,
+  },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "public"),
+          to: path.resolve(__dirname, "build"),
+          globOptions: {
+            ignore: ["**/index.html"],
+          },
+        },
+        {
+          from: path.resolve(__dirname, "src/client"),
+          to: path.resolve(__dirname, "build/client"),
+        },
+      ],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "public/index.html"),
+      filename: "index.html",
+    }),
+  ],
 };
