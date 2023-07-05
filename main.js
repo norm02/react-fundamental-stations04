@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(global, function() {
-return import { createRequire as __WEBPACK_EXTERNAL_createRequire } from "module";
+import { createRequire as __WEBPACK_EXTERNAL_createRequire } from "module";
 /******/ var __webpack_modules__ = ({
 
 /***/ 898:
@@ -11242,17 +11232,6 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("stream");
 /******/ 	__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ }();
 /******/ 
-/******/ /* webpack/runtime/make namespace object */
-/******/ !function() {
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/ }();
-/******/ 
 /******/ /* webpack/runtime/nonce */
 /******/ !function() {
 /******/ 	__webpack_require__.nc = undefined;
@@ -11262,8 +11241,6 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("stream");
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(935);
@@ -12822,6 +12799,3 @@ function App_App() {
 
 react_dom.hydrate( /*#__PURE__*/React.createElement(src_client_App, null), document.getElementById("react-root"));
 }();
-/******/ return __webpack_exports__;
-;
-})
