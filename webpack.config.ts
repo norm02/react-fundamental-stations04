@@ -14,7 +14,6 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     // 出力ファイル名
     filename: "main.js",
-    libraryTarget: "umd",
     chunkLoading: false,
     wasmLoading: false,
     chunkFormat: "commonjs",
@@ -40,7 +39,12 @@ module.exports = {
                 // プリセットを指定することで、ES5 に変換
                 "@babel/preset-env",
                 // React の JSX を解釈
-                "@babel/preset-react",
+                [
+                  "@babel/preset-react",
+                  {
+                    runtime: "automatic",
+                  },
+                ],
               ],
             },
           },

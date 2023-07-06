@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from "react";
 
 const AboutContainer = styled.section`
   background-color: #ffffff;
