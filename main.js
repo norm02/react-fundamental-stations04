@@ -12741,21 +12741,33 @@ var Footer_templateObject, Footer_templateObject2;
 function Footer_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
+
 var FooterBar = st.header(Footer_templateObject || (Footer_templateObject = Footer_taggedTemplateLiteral(["\n  height: 5rem;\n  background-color: #dacb8d;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"])));
 var CenterFooterUpward = st.img(Footer_templateObject2 || (Footer_templateObject2 = Footer_taggedTemplateLiteral(["\n  padding: 1rem;\n  margin-right: 1.5rem;\n  top: 0;\n  transition: top 0.2s ease-in-out;\n  &:hover {\n    opacity: 0.7;\n    cursor: pointer;\n    top: -5px;\n  }\n  display: block;\n"])));
 var Footer = function Footer() {
-  var handleClick = function handleClick() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
+  (0,react.useEffect)(function () {
+    var handleClick = function handleClick() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+    var element = document.getElementById("upward-logo");
+    if (element) {
+      element.addEventListener("click", handleClick);
+    }
+    return function () {
+      if (element) {
+        element.removeEventListener("click", handleClick);
+      }
+    };
+  }, []);
   return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
     children: /*#__PURE__*/(0,jsx_runtime.jsx)(FooterBar, {
       children: /*#__PURE__*/(0,jsx_runtime.jsx)(CenterFooterUpward, {
+        id: "upward-logo",
         src: "https://raw.githubusercontent.com/norm02/react-portfolio/d5099dfe869b6ac91cf16b9b232a02dc3be6d47a/public/images/logo-upwards.svg",
-        alt: "upward",
-        onClick: handleClick
+        alt: "upward"
       })
     })
   });
