@@ -12628,23 +12628,24 @@ var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
+
 var MenuContainer = st.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  .bm-burger-button {\n    position: fixed;\n    width: 36px;\n    height: 30px;\n    right: 36px;\n    top: 36px;\n  }\n  .bm-burger-bars {\n    background: #373a47;\n  }\n"])));
 var MenuList = st.ul(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  list-style: none;\n  margin: 0;\n  padding: 0;\n"])));
 var MenuItem = st.li(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  margin-bottom: 1rem;\n"])));
 var MenuLink = st.a(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: #ffffff;\n  text-decoration: none;\n  &:hover {\n    color: #dacb8d;\n  }\n"])));
 var SideMenu = function SideMenu() {
-  return /*#__PURE__*/React.createElement(MenuContainer, null, /*#__PURE__*/React.createElement(BurgerMenu.slide, {
+  return /*#__PURE__*/react.createElement(MenuContainer, null, /*#__PURE__*/react.createElement(BurgerMenu.slide, {
     right: true,
     width: 200,
-    customBurgerIcon: /*#__PURE__*/React.createElement("img", {
+    customBurgerIcon: /*#__PURE__*/react.createElement("img", {
       src: "https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/logo-menu.svg",
       alt: "menu"
     })
-  }, /*#__PURE__*/React.createElement(MenuList, null, /*#__PURE__*/React.createElement(MenuItem, null, /*#__PURE__*/React.createElement(MenuLink, {
+  }, /*#__PURE__*/react.createElement(MenuList, null, /*#__PURE__*/react.createElement(MenuItem, null, /*#__PURE__*/react.createElement(MenuLink, {
     href: "https://bonomodel.hatenablog.com/"
-  }, "Blog")), /*#__PURE__*/React.createElement(MenuItem, null, /*#__PURE__*/React.createElement(MenuLink, {
+  }, "Blog")), /*#__PURE__*/react.createElement(MenuItem, null, /*#__PURE__*/react.createElement(MenuLink, {
     href: "https://github.com/norm02"
-  }, "GitHub")), /*#__PURE__*/React.createElement(MenuItem, null, /*#__PURE__*/React.createElement(MenuLink, {
+  }, "GitHub")), /*#__PURE__*/react.createElement(MenuItem, null, /*#__PURE__*/react.createElement(MenuLink, {
     href: "https://twitter.com/bonomodel"
   }, "Twitter")))));
 };
@@ -12653,23 +12654,25 @@ var Header_templateObject, Header_templateObject2, Header_templateObject3;
 function Header_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
+
 var HeaderContainer = st.header(Header_templateObject || (Header_templateObject = Header_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  height: 5rem;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n"])));
 var HeaderBar = st.header(Header_templateObject2 || (Header_templateObject2 = Header_taggedTemplateLiteral(["\n  background-color: #dacb8d;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"])));
 var Logo = st.img(Header_templateObject3 || (Header_templateObject3 = Header_taggedTemplateLiteral(["\n  padding: 1rem;\n  height: 5rem;\n"])));
 var Header = function Header() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(HeaderContainer, null, /*#__PURE__*/React.createElement(HeaderBar, null, /*#__PURE__*/React.createElement(Logo, {
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(HeaderContainer, null, /*#__PURE__*/react.createElement(HeaderBar, null, /*#__PURE__*/react.createElement(Logo, {
     src: "https://github.com/norm02/react-portfolio/blob/main/public/images/logo2.png?raw=true",
     alt: "logo"
-  }), /*#__PURE__*/React.createElement(SideMenu, null))));
+  }), /*#__PURE__*/react.createElement(SideMenu, null))));
 };
 ;// CONCATENATED MODULE: ./src/client/components/Top.tsx
 var Top_templateObject, Top_templateObject2;
 function Top_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+
 var TopContainer = st.div(Top_templateObject || (Top_templateObject = Top_taggedTemplateLiteral(["\n  background-color: #dacb8d;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 10rem;\n  margin-top: 7rem;\n"])));
 var PortfolioText = st.img(Top_templateObject2 || (Top_templateObject2 = Top_taggedTemplateLiteral(["\n  width: 70%;\n  height: auto;\n"])));
 var Top = function Top() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(TopContainer, null, /*#__PURE__*/React.createElement(PortfolioText, {
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(TopContainer, null, /*#__PURE__*/react.createElement(PortfolioText, {
     src: "https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/portfolio-text.svg",
     alt: "Text"
   })));
@@ -12677,6 +12680,7 @@ var Top = function Top() {
 ;// CONCATENATED MODULE: ./src/client/components/Footer.tsx
 var Footer_templateObject, Footer_templateObject2;
 function Footer_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 var FooterBar = st.header(Footer_templateObject || (Footer_templateObject = Footer_taggedTemplateLiteral(["\n  height: 5rem;\n  background-color: #dacb8d;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"])));
@@ -12699,7 +12703,7 @@ var Footer = function Footer() {
       }
     };
   }, []);
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(FooterBar, null, /*#__PURE__*/React.createElement(CenterFooterUpward, {
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(FooterBar, null, /*#__PURE__*/react.createElement(CenterFooterUpward, {
     id: "upward-logo",
     src: "https://raw.githubusercontent.com/norm02/react-portfolio/d5099dfe869b6ac91cf16b9b232a02dc3be6d47a/public/images/logo-upwards.svg",
     alt: "upward"
@@ -12709,16 +12713,18 @@ var Footer = function Footer() {
 var AboutContents_templateObject, AboutContents_templateObject2, AboutContents_templateObject3, AboutContents_templateObject4;
 function AboutContents_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+
 var AboutContainer = st.section(AboutContents_templateObject || (AboutContents_templateObject = AboutContents_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 4rem;\n  height: 25rem;\n  margin-left: 8rem;\n  margin-right: 8rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  border-radius: 1rem;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  display: flex;\n"])));
 var AboutTitleContainer = st.div(AboutContents_templateObject2 || (AboutContents_templateObject2 = AboutContents_taggedTemplateLiteral(["\n  width: 40%;\n  padding-right: 2rem;\n  font-size: 2rem;\n  margin-bottom: 2rem;\n"])));
 var AboutDescriptionContainer = st.div(AboutContents_templateObject3 || (AboutContents_templateObject3 = AboutContents_taggedTemplateLiteral(["\n  width: 60%;\n  font-size: 1.5rem;\n  margin-top: 2rem;\n  margin-bottom: 2rem;\n"])));
 var AboutItem = st.li(AboutContents_templateObject4 || (AboutContents_templateObject4 = AboutContents_taggedTemplateLiteral(["\n  list-style: none;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n"])));
 var AboutContents = function AboutContents() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(AboutContainer, null, /*#__PURE__*/React.createElement(AboutTitleContainer, null, /*#__PURE__*/React.createElement("h2", null, "About")), /*#__PURE__*/React.createElement(AboutDescriptionContainer, null, /*#__PURE__*/React.createElement(AboutItem, null, /*#__PURE__*/React.createElement("p", null, "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u5B66\u7FD2\u4E2D"), /*#__PURE__*/React.createElement("p", null, "\u73FE\u5728\u306F\u30A2\u30EB\u30D0\u30A4\u30C8\u3067\u3001\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u30A8\u30F3\u30B8\u30CB\u30A2\u3068\u3057\u3066\u6D3B\u52D5\u4E2D"), /*#__PURE__*/React.createElement("p", null, "\u4ECA\u306E\u30BF\u30B9\u30AF\u306FCypress\u3092\u7528\u3044\u305FE2E\u30C6\u30B9\u30C8\u306E\u81EA\u52D5\u5316"), /*#__PURE__*/React.createElement("p", null, "\u307C\u3061\u307C\u3061\u697D\u3057\u304F\u304C\u30E2\u30C3\u30C8\u30FC\u3067\u3059")))));
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(AboutContainer, null, /*#__PURE__*/react.createElement(AboutTitleContainer, null, /*#__PURE__*/react.createElement("h2", null, "About")), /*#__PURE__*/react.createElement(AboutDescriptionContainer, null, /*#__PURE__*/react.createElement(AboutItem, null, /*#__PURE__*/react.createElement("p", null, "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u5B66\u7FD2\u4E2D"), /*#__PURE__*/react.createElement("p", null, "\u73FE\u5728\u306F\u30A2\u30EB\u30D0\u30A4\u30C8\u3067\u3001\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u30A8\u30F3\u30B8\u30CB\u30A2\u3068\u3057\u3066\u6D3B\u52D5\u4E2D"), /*#__PURE__*/react.createElement("p", null, "\u4ECA\u306E\u30BF\u30B9\u30AF\u306FCypress\u3092\u7528\u3044\u305FE2E\u30C6\u30B9\u30C8\u306E\u81EA\u52D5\u5316"), /*#__PURE__*/react.createElement("p", null, "\u307C\u3061\u307C\u3061\u697D\u3057\u304F\u304C\u30E2\u30C3\u30C8\u30FC\u3067\u3059")))));
 };
 ;// CONCATENATED MODULE: ./src/client/components/SkillContents.tsx
 var SkillContents_templateObject, SkillContents_templateObject2, SkillContents_templateObject3, SkillContents_templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
 function SkillContents_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 var SkillContainer = st.section(SkillContents_templateObject || (SkillContents_templateObject = SkillContents_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 4rem;\n  height: 25rem;\n  margin: 5rem 8rem;\n  border-radius: 1rem;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  display: flex;\n"])));
 var SkillTitleContainer = st.div(SkillContents_templateObject2 || (SkillContents_templateObject2 = SkillContents_taggedTemplateLiteral(["\n  width: 40%;\n  padding-right: 2rem;\n  font-size: 2rem;\n  margin: 2rem 0;\n"])));
@@ -12729,11 +12735,12 @@ var SkillListItem = st.li(_templateObject6 || (_templateObject6 = SkillContents_
 var SkillListWrapper = st.div(_templateObject7 || (_templateObject7 = SkillContents_taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n"])));
 var SkillListColumn = st.div(_templateObject8 || (_templateObject8 = SkillContents_taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-right: 4rem;\n"])));
 var SkillContents = function SkillContents() {
-  return /*#__PURE__*/React.createElement(SkillContainer, null, /*#__PURE__*/React.createElement(SkillTitleContainer, null, /*#__PURE__*/React.createElement("h2", null, "Skill")), /*#__PURE__*/React.createElement(SkillDescriptionContainer, null, /*#__PURE__*/React.createElement(SkillListContainer, null, /*#__PURE__*/React.createElement(SkillListWrapper, null, /*#__PURE__*/React.createElement(SkillListColumn, null, /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "JavaScript"), /*#__PURE__*/React.createElement(SkillListItem, null, "TypeScript"), /*#__PURE__*/React.createElement(SkillListItem, null, "React.js"))))), /*#__PURE__*/React.createElement(SkillListColumn, null, /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "AI"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "Python"), /*#__PURE__*/React.createElement(SkillListItem, null, "TensorFlow"), /*#__PURE__*/React.createElement(SkillListItem, null, "PyTorch"))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "\u30C6\u30B9\u30C8"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "Cypress"))))), /*#__PURE__*/React.createElement(SkillListColumn, null, /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "\u30AF\u30E9\u30A6\u30C9"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "GoogleCloud")))))))));
+  return /*#__PURE__*/react.createElement(SkillContainer, null, /*#__PURE__*/react.createElement(SkillTitleContainer, null, /*#__PURE__*/react.createElement("h2", null, "Skill")), /*#__PURE__*/react.createElement(SkillDescriptionContainer, null, /*#__PURE__*/react.createElement(SkillListContainer, null, /*#__PURE__*/react.createElement(SkillListWrapper, null, /*#__PURE__*/react.createElement(SkillListColumn, null, /*#__PURE__*/react.createElement(SkillList, null, /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("h3", null, "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9"), /*#__PURE__*/react.createElement(SkillList, null, /*#__PURE__*/react.createElement(SkillListItem, null, "JavaScript"), /*#__PURE__*/react.createElement(SkillListItem, null, "TypeScript"), /*#__PURE__*/react.createElement(SkillListItem, null, "React.js"))))), /*#__PURE__*/react.createElement(SkillListColumn, null, /*#__PURE__*/react.createElement(SkillList, null, /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("h3", null, "AI"), /*#__PURE__*/react.createElement(SkillList, null, /*#__PURE__*/react.createElement(SkillListItem, null, "Python"), /*#__PURE__*/react.createElement(SkillListItem, null, "TensorFlow"), /*#__PURE__*/react.createElement(SkillListItem, null, "PyTorch"))), /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("h3", null, "\u30C6\u30B9\u30C8"), /*#__PURE__*/react.createElement(SkillList, null, /*#__PURE__*/react.createElement(SkillListItem, null, "Cypress"))))), /*#__PURE__*/react.createElement(SkillListColumn, null, /*#__PURE__*/react.createElement(SkillList, null, /*#__PURE__*/react.createElement("li", null, /*#__PURE__*/react.createElement("h3", null, "\u30AF\u30E9\u30A6\u30C9"), /*#__PURE__*/react.createElement(SkillList, null, /*#__PURE__*/react.createElement(SkillListItem, null, "GoogleCloud")))))))));
 };
 ;// CONCATENATED MODULE: ./src/client/components/LinkContents.tsx
 var LinkContents_templateObject, LinkContents_templateObject2, LinkContents_templateObject3, LinkContents_templateObject4, LinkContents_templateObject5;
 function LinkContents_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 var LinkContainer = st.section(LinkContents_templateObject || (LinkContents_templateObject = LinkContents_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 4rem;\n  height: 25rem;\n  margin-left: 8rem;\n  margin-right: 8rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  border-radius: 1rem;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  display: flex;\n"])));
 var LinkTitleContainer = st.div(LinkContents_templateObject2 || (LinkContents_templateObject2 = LinkContents_taggedTemplateLiteral(["\n  width: 40%;\n  padding-right: 2rem;\n  font-size: 2rem;\n  margin-bottom: 2rem;\n"])));
@@ -12741,11 +12748,11 @@ var LinkDescriptionContainer = st.div(LinkContents_templateObject3 || (LinkConte
 var LinkItem = st.li(LinkContents_templateObject4 || (LinkContents_templateObject4 = LinkContents_taggedTemplateLiteral(["\n  list-style: none;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n"])));
 var Linkurl = st.a(LinkContents_templateObject5 || (LinkContents_templateObject5 = LinkContents_taggedTemplateLiteral([""])));
 var LinkContents = function LinkContents() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(LinkContainer, null, /*#__PURE__*/React.createElement(LinkTitleContainer, null, /*#__PURE__*/React.createElement("h2", null, "Link")), /*#__PURE__*/React.createElement(LinkDescriptionContainer, null, /*#__PURE__*/React.createElement(LinkItem, null, /*#__PURE__*/React.createElement(Linkurl, {
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(LinkContainer, null, /*#__PURE__*/react.createElement(LinkTitleContainer, null, /*#__PURE__*/react.createElement("h2", null, "Link")), /*#__PURE__*/react.createElement(LinkDescriptionContainer, null, /*#__PURE__*/react.createElement(LinkItem, null, /*#__PURE__*/react.createElement(Linkurl, {
     href: "https://bonomodel.hatenablog.com/"
-  }, "Blog")), /*#__PURE__*/React.createElement(LinkItem, null, /*#__PURE__*/React.createElement(Linkurl, {
+  }, "Blog")), /*#__PURE__*/react.createElement(LinkItem, null, /*#__PURE__*/react.createElement(Linkurl, {
     href: "href=https://github.com/norm02"
-  }, "GitHub")), /*#__PURE__*/React.createElement(LinkItem, null, /*#__PURE__*/React.createElement(Linkurl, {
+  }, "GitHub")), /*#__PURE__*/react.createElement(LinkItem, null, /*#__PURE__*/react.createElement(Linkurl, {
     href: "https://twitter.com/bonomodel"
   }, "Twitter")))));
 };
@@ -12756,8 +12763,9 @@ var LinkContents = function LinkContents() {
 
 
 
+
 var Home = function Home() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement(Top, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement(AboutContents, null), /*#__PURE__*/React.createElement(SkillContents, null), /*#__PURE__*/React.createElement(LinkContents, null))), /*#__PURE__*/React.createElement(Footer, null));
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(Header, null), /*#__PURE__*/react.createElement(Top, null), /*#__PURE__*/react.createElement("main", null, /*#__PURE__*/react.createElement("section", null, /*#__PURE__*/react.createElement(AboutContents, null), /*#__PURE__*/react.createElement(SkillContents, null), /*#__PURE__*/react.createElement(LinkContents, null))), /*#__PURE__*/react.createElement(Footer, null));
 };
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/client/App.css
 var App = __webpack_require__(898);
