@@ -1,4 +1,14 @@
-/******/ var __webpack_modules__ = ({
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(self, function() {
+return /******/ var __webpack_modules__ = ({
 
 /***/ 898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2631,25 +2641,6 @@ if (true) {
 
 /***/ }),
 
-/***/ 251:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-var __webpack_unused_export__;
-/**
- * @license React
- * react-jsx-runtime.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var f=__webpack_require__(294),k=Symbol.for("react.element"),l=Symbol.for("react.fragment"),m=Object.prototype.hasOwnProperty,n=f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,p={key:!0,ref:!0,__self:!0,__source:!0};
-function q(c,a,g){var b,d={},e=null,h=null;void 0!==g&&(e=""+g);void 0!==a.key&&(e=""+a.key);void 0!==a.ref&&(h=a.ref);for(b in a)m.call(a,b)&&!p.hasOwnProperty(b)&&(d[b]=a[b]);if(c&&c.defaultProps)for(b in a=c.defaultProps,a)void 0===d[b]&&(d[b]=a[b]);return{$$typeof:k,type:c,key:e,ref:h,props:d,_owner:n.current}}__webpack_unused_export__=l;exports.jsx=q;exports.jsxs=q;
-
-
-/***/ }),
-
 /***/ 408:
 /***/ (function(__unused_webpack_module, exports) {
 
@@ -2690,18 +2681,6 @@ exports.useTransition=function(){return U.current.useTransition()};exports.versi
 
 if (true) {
   module.exports = __webpack_require__(408);
-} else {}
-
-
-/***/ }),
-
-/***/ 893:
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-
-if (true) {
-  module.exports = __webpack_require__(251);
 } else {}
 
 
@@ -11255,6 +11234,17 @@ module.exports = styleTagTransform;
 /******/ 	__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ }();
 /******/ 
+/******/ /* webpack/runtime/make namespace object */
+/******/ !function() {
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/ }();
+/******/ 
 /******/ /* webpack/runtime/nonce */
 /******/ !function() {
 /******/ 	__webpack_require__.nc = undefined;
@@ -11264,6 +11254,8 @@ module.exports = styleTagTransform;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(294);
@@ -12654,13 +12646,9 @@ var f="undefined"!=typeof process&&void 0!==process.env&&(process.env.REACT_APP_
 
 // EXTERNAL MODULE: ./node_modules/react-burger-menu/lib/BurgerMenu.js
 var BurgerMenu = __webpack_require__(190);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(893);
 ;// CONCATENATED MODULE: ./src/client/components/SideMenu.tsx
 var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
 
 
 var MenuContainer = st.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  .bm-burger-button {\n    position: fixed;\n    width: 36px;\n    height: 30px;\n    right: 36px;\n    top: 36px;\n  }\n  .bm-burger-bars {\n    background: #373a47;\n  }\n"])));
@@ -12668,148 +12656,80 @@ var MenuList = st.ul(_templateObject2 || (_templateObject2 = _taggedTemplateLite
 var MenuItem = st.li(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  margin-bottom: 1rem;\n"])));
 var MenuLink = st.a(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: #ffffff;\n  text-decoration: none;\n  &:hover {\n    color: #dacb8d;\n  }\n"])));
 var SideMenu = function SideMenu() {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(MenuContainer, {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(BurgerMenu.slide, {
-      right: true,
-      width: 200,
-      customBurgerIcon: /*#__PURE__*/(0,jsx_runtime.jsx)("img", {
-        src: "https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/logo-menu.svg",
-        alt: "menu"
-      }),
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(MenuList, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(MenuItem, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(MenuLink, {
-            href: "https://bonomodel.hatenablog.com/",
-            children: "Blog"
-          })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(MenuItem, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(MenuLink, {
-            href: "https://github.com/norm02",
-            children: "GitHub"
-          })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(MenuItem, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(MenuLink, {
-            href: "https://twitter.com/bonomodel",
-            children: "Twitter"
-          })
-        })]
-      })
+  return /*#__PURE__*/React.createElement(MenuContainer, null, /*#__PURE__*/React.createElement(BurgerMenu.slide, {
+    right: true,
+    width: 200,
+    customBurgerIcon: /*#__PURE__*/React.createElement("img", {
+      src: "https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/logo-menu.svg",
+      alt: "menu"
     })
-  });
+  }, /*#__PURE__*/React.createElement(MenuList, null, /*#__PURE__*/React.createElement(MenuItem, null, /*#__PURE__*/React.createElement(MenuLink, {
+    href: "https://bonomodel.hatenablog.com/"
+  }, "Blog")), /*#__PURE__*/React.createElement(MenuItem, null, /*#__PURE__*/React.createElement(MenuLink, {
+    href: "https://github.com/norm02"
+  }, "GitHub")), /*#__PURE__*/React.createElement(MenuItem, null, /*#__PURE__*/React.createElement(MenuLink, {
+    href: "https://twitter.com/bonomodel"
+  }, "Twitter")))));
 };
 ;// CONCATENATED MODULE: ./src/client/components/Header.tsx
 var Header_templateObject, Header_templateObject2, Header_templateObject3;
 function Header_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
-
-
 var HeaderContainer = st.header(Header_templateObject || (Header_templateObject = Header_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  height: 5rem;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n"])));
 var HeaderBar = st.header(Header_templateObject2 || (Header_templateObject2 = Header_taggedTemplateLiteral(["\n  background-color: #dacb8d;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"])));
 var Logo = st.img(Header_templateObject3 || (Header_templateObject3 = Header_taggedTemplateLiteral(["\n  padding: 1rem;\n  height: 5rem;\n"])));
 var Header = function Header() {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(HeaderContainer, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)(HeaderBar, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Logo, {
-          src: "https://github.com/norm02/react-portfolio/blob/main/public/images/logo2.png?raw=true",
-          alt: "logo"
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(SideMenu, {})]
-      })
-    })
-  });
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(HeaderContainer, null, /*#__PURE__*/React.createElement(HeaderBar, null, /*#__PURE__*/React.createElement(Logo, {
+    src: "https://github.com/norm02/react-portfolio/blob/main/public/images/logo2.png?raw=true",
+    alt: "logo"
+  }), /*#__PURE__*/React.createElement(SideMenu, null))));
 };
 ;// CONCATENATED MODULE: ./src/client/components/Top.tsx
 var Top_templateObject, Top_templateObject2;
 function Top_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-
 var TopContainer = st.div(Top_templateObject || (Top_templateObject = Top_taggedTemplateLiteral(["\n  background-color: #dacb8d;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 10rem;\n  margin-top: 7rem;\n"])));
 var PortfolioText = st.img(Top_templateObject2 || (Top_templateObject2 = Top_taggedTemplateLiteral(["\n  width: 70%;\n  height: auto;\n"])));
 var Top = function Top() {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(TopContainer, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(PortfolioText, {
-        src: "https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/portfolio-text.svg",
-        alt: "Text"
-      })
-    })
-  });
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(TopContainer, null, /*#__PURE__*/React.createElement(PortfolioText, {
+    src: "https://raw.githubusercontent.com/norm02/react-portfolio/8530023cf2f1ed24f595739d72abb15838d4be2c/public/images/portfolio-text.svg",
+    alt: "Text"
+  })));
 };
 ;// CONCATENATED MODULE: ./src/client/components/Footer.tsx
 var Footer_templateObject, Footer_templateObject2;
 function Footer_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-
-
 var FooterBar = st.header(Footer_templateObject || (Footer_templateObject = Footer_taggedTemplateLiteral(["\n  height: 5rem;\n  background-color: #dacb8d;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"])));
 var CenterFooterUpward = st.img(Footer_templateObject2 || (Footer_templateObject2 = Footer_taggedTemplateLiteral(["\n  padding: 1rem;\n  margin-right: 1.5rem;\n  top: 0;\n  transition: top 0.2s ease-in-out;\n  &:hover {\n    opacity: 0.7;\n    cursor: pointer;\n    top: -5px;\n  }\n  display: block;\n"])));
 var Footer = function Footer() {
-  (0,react.useEffect)(function () {
-    var handleClick = function handleClick() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    };
-    var element = document.getElementById("upward-logo");
-    if (element) {
-      element.addEventListener("click", handleClick);
-    }
-    return function () {
-      if (element) {
-        element.removeEventListener("click", handleClick);
-      }
-    };
-  }, []);
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-    children: /*#__PURE__*/(0,jsx_runtime.jsx)(FooterBar, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(CenterFooterUpward, {
-        id: "upward-logo",
-        src: "https://raw.githubusercontent.com/norm02/react-portfolio/d5099dfe869b6ac91cf16b9b232a02dc3be6d47a/public/images/logo-upwards.svg",
-        alt: "upward"
-      })
-    })
-  });
+  var handleClick = function handleClick() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(FooterBar, null, /*#__PURE__*/React.createElement(CenterFooterUpward, {
+    src: "https://raw.githubusercontent.com/norm02/react-portfolio/d5099dfe869b6ac91cf16b9b232a02dc3be6d47a/public/images/logo-upwards.svg",
+    alt: "upward",
+    onClick: handleClick
+  })));
 };
 ;// CONCATENATED MODULE: ./src/client/components/AboutContents.tsx
 var AboutContents_templateObject, AboutContents_templateObject2, AboutContents_templateObject3, AboutContents_templateObject4;
 function AboutContents_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
 
 var AboutContainer = st.section(AboutContents_templateObject || (AboutContents_templateObject = AboutContents_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 4rem;\n  height: 25rem;\n  margin-left: 8rem;\n  margin-right: 8rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  border-radius: 1rem;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  display: flex;\n"])));
 var AboutTitleContainer = st.div(AboutContents_templateObject2 || (AboutContents_templateObject2 = AboutContents_taggedTemplateLiteral(["\n  width: 40%;\n  padding-right: 2rem;\n  font-size: 2rem;\n  margin-bottom: 2rem;\n"])));
 var AboutDescriptionContainer = st.div(AboutContents_templateObject3 || (AboutContents_templateObject3 = AboutContents_taggedTemplateLiteral(["\n  width: 60%;\n  font-size: 1.5rem;\n  margin-top: 2rem;\n  margin-bottom: 2rem;\n"])));
 var AboutItem = st.li(AboutContents_templateObject4 || (AboutContents_templateObject4 = AboutContents_taggedTemplateLiteral(["\n  list-style: none;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n"])));
 var AboutContents = function AboutContents() {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(AboutContainer, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(AboutTitleContainer, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
-          children: "About"
-        })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)(AboutDescriptionContainer, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)(AboutItem, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-            children: "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u5B66\u7FD2\u4E2D"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-            children: "\u73FE\u5728\u306F\u30A2\u30EB\u30D0\u30A4\u30C8\u3067\u3001\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u30A8\u30F3\u30B8\u30CB\u30A2\u3068\u3057\u3066\u6D3B\u52D5\u4E2D"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-            children: "\u4ECA\u306E\u30BF\u30B9\u30AF\u306FCypress\u3092\u7528\u3044\u305FE2E\u30C6\u30B9\u30C8\u306E\u81EA\u52D5\u5316"
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-            children: "\u307C\u3061\u307C\u3061\u697D\u3057\u304F\u304C\u30E2\u30C3\u30C8\u30FC\u3067\u3059"
-          })]
-        })
-      })]
-    })
-  });
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(AboutContainer, null, /*#__PURE__*/React.createElement(AboutTitleContainer, null, /*#__PURE__*/React.createElement("h2", null, "About")), /*#__PURE__*/React.createElement(AboutDescriptionContainer, null, /*#__PURE__*/React.createElement(AboutItem, null, /*#__PURE__*/React.createElement("p", null, "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9\u5B66\u7FD2\u4E2D"), /*#__PURE__*/React.createElement("p", null, "\u73FE\u5728\u306F\u30A2\u30EB\u30D0\u30A4\u30C8\u3067\u3001\u30BD\u30D5\u30C8\u30A6\u30A7\u30A2\u30A8\u30F3\u30B8\u30CB\u30A2\u3068\u3057\u3066\u6D3B\u52D5\u4E2D"), /*#__PURE__*/React.createElement("p", null, "\u4ECA\u306E\u30BF\u30B9\u30AF\u306FCypress\u3092\u7528\u3044\u305FE2E\u30C6\u30B9\u30C8\u306E\u81EA\u52D5\u5316"), /*#__PURE__*/React.createElement("p", null, "\u307C\u3061\u307C\u3061\u697D\u3057\u304F\u304C\u30E2\u30C3\u30C8\u30FC\u3067\u3059")))));
 };
 ;// CONCATENATED MODULE: ./src/client/components/SkillContents.tsx
 var SkillContents_templateObject, SkillContents_templateObject2, SkillContents_templateObject3, SkillContents_templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
 function SkillContents_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
 
 var SkillContainer = st.section(SkillContents_templateObject || (SkillContents_templateObject = SkillContents_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 4rem;\n  height: 25rem;\n  margin: 5rem 8rem;\n  border-radius: 1rem;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  display: flex;\n"])));
 var SkillTitleContainer = st.div(SkillContents_templateObject2 || (SkillContents_templateObject2 = SkillContents_taggedTemplateLiteral(["\n  width: 40%;\n  padding-right: 2rem;\n  font-size: 2rem;\n  margin: 2rem 0;\n"])));
@@ -12820,77 +12740,11 @@ var SkillListItem = st.li(_templateObject6 || (_templateObject6 = SkillContents_
 var SkillListWrapper = st.div(_templateObject7 || (_templateObject7 = SkillContents_taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n"])));
 var SkillListColumn = st.div(_templateObject8 || (_templateObject8 = SkillContents_taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-right: 4rem;\n"])));
 var SkillContents = function SkillContents() {
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)(SkillContainer, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(SkillTitleContainer, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
-        children: "Skill"
-      })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillDescriptionContainer, {
-      children: /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListContainer, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)(SkillListWrapper, {
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)(SkillListColumn, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(SkillList, {
-              children: /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-                children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
-                  children: "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9"
-                }), /*#__PURE__*/(0,jsx_runtime.jsxs)(SkillList, {
-                  children: [/*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "JavaScript"
-                  }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "TypeScript"
-                  }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "React.js"
-                  })]
-                })]
-              })
-            })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListColumn, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsxs)(SkillList, {
-              children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-                children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
-                  children: "AI"
-                }), /*#__PURE__*/(0,jsx_runtime.jsxs)(SkillList, {
-                  children: [/*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "Python"
-                  }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "TensorFlow"
-                  }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "PyTorch"
-                  })]
-                })]
-              }), /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-                children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
-                  children: "\u30C6\u30B9\u30C8"
-                }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillList, {
-                  children: /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "Cypress"
-                  })
-                })]
-              })]
-            })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListColumn, {
-            children: /*#__PURE__*/(0,jsx_runtime.jsx)(SkillList, {
-              children: /*#__PURE__*/(0,jsx_runtime.jsxs)("li", {
-                children: [/*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
-                  children: "\u30AF\u30E9\u30A6\u30C9"
-                }), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillList, {
-                  children: /*#__PURE__*/(0,jsx_runtime.jsx)(SkillListItem, {
-                    children: "GoogleCloud"
-                  })
-                })]
-              })
-            })
-          })]
-        })
-      })
-    })]
-  });
+  return /*#__PURE__*/React.createElement(SkillContainer, null, /*#__PURE__*/React.createElement(SkillTitleContainer, null, /*#__PURE__*/React.createElement("h2", null, "Skill")), /*#__PURE__*/React.createElement(SkillDescriptionContainer, null, /*#__PURE__*/React.createElement(SkillListContainer, null, /*#__PURE__*/React.createElement(SkillListWrapper, null, /*#__PURE__*/React.createElement(SkillListColumn, null, /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "\u30D5\u30ED\u30F3\u30C8\u30A8\u30F3\u30C9"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "JavaScript"), /*#__PURE__*/React.createElement(SkillListItem, null, "TypeScript"), /*#__PURE__*/React.createElement(SkillListItem, null, "React.js"))))), /*#__PURE__*/React.createElement(SkillListColumn, null, /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "AI"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "Python"), /*#__PURE__*/React.createElement(SkillListItem, null, "TensorFlow"), /*#__PURE__*/React.createElement(SkillListItem, null, "PyTorch"))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "\u30C6\u30B9\u30C8"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "Cypress"))))), /*#__PURE__*/React.createElement(SkillListColumn, null, /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "\u30AF\u30E9\u30A6\u30C9"), /*#__PURE__*/React.createElement(SkillList, null, /*#__PURE__*/React.createElement(SkillListItem, null, "GoogleCloud")))))))));
 };
 ;// CONCATENATED MODULE: ./src/client/components/LinkContents.tsx
 var LinkContents_templateObject, LinkContents_templateObject2, LinkContents_templateObject3, LinkContents_templateObject4, LinkContents_templateObject5;
 function LinkContents_taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
 
 var LinkContainer = st.section(LinkContents_templateObject || (LinkContents_templateObject = LinkContents_taggedTemplateLiteral(["\n  background-color: #ffffff;\n  padding: 4rem;\n  height: 25rem;\n  margin-left: 8rem;\n  margin-right: 8rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  border-radius: 1rem;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  display: flex;\n"])));
 var LinkTitleContainer = st.div(LinkContents_templateObject2 || (LinkContents_templateObject2 = LinkContents_taggedTemplateLiteral(["\n  width: 40%;\n  padding-right: 2rem;\n  font-size: 2rem;\n  margin-bottom: 2rem;\n"])));
@@ -12898,32 +12752,13 @@ var LinkDescriptionContainer = st.div(LinkContents_templateObject3 || (LinkConte
 var LinkItem = st.li(LinkContents_templateObject4 || (LinkContents_templateObject4 = LinkContents_taggedTemplateLiteral(["\n  list-style: none;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n"])));
 var Linkurl = st.a(LinkContents_templateObject5 || (LinkContents_templateObject5 = LinkContents_taggedTemplateLiteral([""])));
 var LinkContents = function LinkContents() {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)(LinkContainer, {
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)(LinkTitleContainer, {
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("h2", {
-          children: "Link"
-        })
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)(LinkDescriptionContainer, {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(LinkItem, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(Linkurl, {
-            href: "https://bonomodel.hatenablog.com/",
-            children: "Blog"
-          })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(LinkItem, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(Linkurl, {
-            href: "href=https://github.com/norm02",
-            children: "GitHub"
-          })
-        }), /*#__PURE__*/(0,jsx_runtime.jsx)(LinkItem, {
-          children: /*#__PURE__*/(0,jsx_runtime.jsx)(Linkurl, {
-            href: "https://twitter.com/bonomodel",
-            children: "Twitter"
-          })
-        })]
-      })]
-    })
-  });
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(LinkContainer, null, /*#__PURE__*/React.createElement(LinkTitleContainer, null, /*#__PURE__*/React.createElement("h2", null, "Link")), /*#__PURE__*/React.createElement(LinkDescriptionContainer, null, /*#__PURE__*/React.createElement(LinkItem, null, /*#__PURE__*/React.createElement(Linkurl, {
+    href: "https://bonomodel.hatenablog.com/"
+  }, "Blog")), /*#__PURE__*/React.createElement(LinkItem, null, /*#__PURE__*/React.createElement(Linkurl, {
+    href: "href=https://github.com/norm02"
+  }, "GitHub")), /*#__PURE__*/React.createElement(LinkItem, null, /*#__PURE__*/React.createElement(Linkurl, {
+    href: "https://twitter.com/bonomodel"
+  }, "Twitter")))));
 };
 ;// CONCATENATED MODULE: ./src/client/pages/Home.tsx
 
@@ -12932,16 +12767,8 @@ var LinkContents = function LinkContents() {
 
 
 
-
-
 var Home = function Home() {
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Header, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(Top, {}), /*#__PURE__*/(0,jsx_runtime.jsx)("main", {
-      children: /*#__PURE__*/(0,jsx_runtime.jsxs)("section", {
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)(AboutContents, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(SkillContents, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(LinkContents, {})]
-      })
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(Footer, {})]
-  });
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement(Top, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement(AboutContents, null), /*#__PURE__*/React.createElement(SkillContents, null), /*#__PURE__*/React.createElement(LinkContents, null))), /*#__PURE__*/React.createElement(Footer, null));
 };
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/client/App.css
 var App = __webpack_require__(898);
@@ -12978,9 +12805,8 @@ var App_update = injectStylesIntoStyleTag_default()(App/* default */.Z, App_opti
 
 
 
-
 function App_App() {
-  return /*#__PURE__*/(0,jsx_runtime.jsx)(Home, {});
+  return /*#__PURE__*/react.createElement(Home, null);
 }
 /* harmony default export */ var src_client_App = (App_App);
 ;// CONCATENATED MODULE: ./src/client/index.tsx
@@ -12988,6 +12814,8 @@ function App_App() {
 
 
 
-
-react_dom.hydrate( /*#__PURE__*/(0,jsx_runtime.jsx)(src_client_App, {}), document.getElementById("react-root"));
+react_dom.hydrate( /*#__PURE__*/react.createElement(src_client_App, null), document.getElementById("react-root"));
 }();
+/******/ return __webpack_exports__;
+;
+})
