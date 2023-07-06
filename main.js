@@ -1,14 +1,5 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(self, function() {
-return /******/ var __webpack_modules__ = ({
+var LiraryName;
+/******/ var __webpack_modules__ = ({
 
 /***/ 898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -12826,6 +12817,4 @@ function App_App() {
 
 react_dom.hydrate( /*#__PURE__*/React.createElement(src_client_App, null), document.getElementById("react-root"));
 }();
-/******/ return __webpack_exports__;
-;
-})
+LiraryName = __webpack_exports__;
