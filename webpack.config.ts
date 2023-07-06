@@ -40,7 +40,7 @@ module.exports = {
                 // プリセットを指定することで、ES5 に変換
                 "@babel/preset-env",
                 // React の JSX を解釈
-                "@babel/react",
+                "@babel/preset-react",
               ],
             },
           },
@@ -54,7 +54,6 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
-    modules: ["node_modules"],
     fallback: {
       zlib: require.resolve("browserify-zlib"),
       querystring: require.resolve("querystring-es3"),
@@ -70,7 +69,7 @@ module.exports = {
       async_hooks: require.resolve("async"),
     },
   },
-  target: ["node", "es5"],
+  target: ["web", "es5"],
   devServer: {
     contentBase: path.join(__dirname, "public"),
     compress: true,
