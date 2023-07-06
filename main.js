@@ -11234,6 +11234,8 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
 
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(935);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
@@ -11657,8 +11659,6 @@ function __disposeResources(env) {
   __disposeResources,
 });
 
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(294);
 // EXTERNAL MODULE: ./node_modules/shallowequal/index.js
 var shallowequal = __webpack_require__(774);
 var shallowequal_default = /*#__PURE__*/__webpack_require__.n(shallowequal);
@@ -12793,13 +12793,15 @@ var App_update = injectStylesIntoStyleTag_default()(App/* default */.Z, App_opti
 ;// CONCATENATED MODULE: ./src/client/App.tsx
 
 
+
 function App_App() {
-  return /*#__PURE__*/React.createElement(Home, null);
+  return /*#__PURE__*/react.createElement(Home, null);
 }
 /* harmony default export */ var src_client_App = (App_App);
 ;// CONCATENATED MODULE: ./src/client/index.tsx
 
 
 
-react_dom.hydrate( /*#__PURE__*/React.createElement(src_client_App, null), document.getElementById("react-root"));
+
+react_dom.hydrate( /*#__PURE__*/react.createElement(src_client_App, null), document.getElementById("react-root"));
 }();
