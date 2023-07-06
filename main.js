@@ -11265,6 +11265,8 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
 
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(935);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
@@ -11688,8 +11690,6 @@ function __disposeResources(env) {
   __disposeResources,
 });
 
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(294);
 // EXTERNAL MODULE: ./node_modules/shallowequal/index.js
 var shallowequal = __webpack_require__(774);
 var shallowequal_default = /*#__PURE__*/__webpack_require__.n(shallowequal);
@@ -12966,11 +12966,13 @@ var App_update = injectStylesIntoStyleTag_default()(App/* default */.Z, App_opti
 
 
 
+
 function App_App() {
   return /*#__PURE__*/(0,jsx_runtime.jsx)(Home, {});
 }
 /* harmony default export */ var src_client_App = (App_App);
 ;// CONCATENATED MODULE: ./src/client/index.tsx
+
 
 
 
