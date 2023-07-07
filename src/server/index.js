@@ -4,7 +4,7 @@ import fs from "fs";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import express from "express";
-import App from "../client/App";
+import App from "../App";
 
 const app = express();
 const port = process.env.PORT || 9000;
@@ -33,6 +33,3 @@ app.use(express.static("./build"));
 app.listen(port, () => {
   console.log(`listening on *:${port}`);
 });
-
-//起動方法
-// node server/index.js

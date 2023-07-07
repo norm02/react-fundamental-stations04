@@ -17,6 +17,6 @@
     "jsx": "preserve",
     "outDir": "./build"
   },
-  "include": ["*/**/*.ts", "*/**/*.tsx"],
+  "include": ["*/**/*.ts", "*/**/*.tsx", "src/server/index.js"],
   "exclude": ["node_modules"]
 }
