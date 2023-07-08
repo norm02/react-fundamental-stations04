@@ -8,7 +8,7 @@ module.exports = {
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: "production",
   // メインとなるJavaScriptファイル（エントリーポイント）
-  entry: "./src/server/index.js",
+  entry: "./server/index.js",
   // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
@@ -75,7 +75,7 @@ module.exports = {
       async_hooks: require.resolve("async"),
     },
   },
-  target: ["web", "es5"],
+  target: ["node", "es5"],
   devServer: {
     contentBase: path.join(__dirname, "public"),
     compress: true,

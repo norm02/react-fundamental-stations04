@@ -2,7 +2,7 @@
   "name": "react-portfolio",
   "type": "module",
   "version": "0.1.0",
-  "main": "./src/server/index.js",
+  "main": "./server/index.js",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
