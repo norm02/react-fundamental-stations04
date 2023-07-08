@@ -1,16 +1,21 @@
 import path from "path";
 import fs from "fs";
 
+require("@babel/register")({
+  presets: ["@babel/preset-env", "@babel/preset-react"],
+});
+
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import express from "express";
-import App from "../src/client/App";
+
+import App from "../client/App";
 
 const app = express();
 const port = process.env.PORT || 9000;
 
 app.get("/", (req, res) => {
-  const appContent = ReactDOMServer.renderToString(<App />);
+  const appContent = ReactDOMServer.renderToString(ReactCreateElement(App));
   const indexFile = path.resolve("./build/index.html");
 
   fs.readFile(indexFile, "utf8", (err, data) => {
@@ -33,3 +38,5 @@ app.use(express.static(path.resolve(__dirname, "..", "build")));
 app.listen(port, () => {
   console.log(`listening on *:${port}`);
 });
+
+//

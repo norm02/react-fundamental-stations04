@@ -1,13 +1,14 @@
 import path from "path";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import nodeExternals from "webpack-node-externals";
 
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: "production",
   // メインとなるJavaScriptファイル（エントリーポイント）
-  entry: "./src/index.js",
+  entry: "./src/server/index.js",
   // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
@@ -18,6 +19,7 @@ module.exports = {
     wasmLoading: false,
     chunkFormat: "commonjs",
   },
+  externals: [nodeExternals()],
   optimization: {
     minimize: false,
   },
