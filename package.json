@@ -1,8 +1,8 @@
 {
   "name": "react-portfolio",
-  "type": "module",
   "version": "0.1.0",
-  "main": "./server/index.js",
+  "main": "./server/index.mjs",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
@@ -50,11 +50,8 @@
     "webpack-package-loaders-plugin": "^3.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack -w",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "ts-node-esm server/index.mjs",
+    "build": "webpack",
     "deploy": "npm run build && gh-pages -d build"
   },
   "browserslist": {

@@ -14,9 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "outDir": "./build"
   },
-  "include": ["*/**/*.ts", "*/**/*.tsx", "server/index.js", "client/index.jsx"],
+  "include": [
+    "*/**/*.ts",
+    "*/**/*.tsx",
+    "server/index.mjs",
+    "client/index.jsx"
+  ],
   "exclude": ["node_modules"]
 }
