@@ -4,6 +4,7 @@
   "main": "./server/index.mjs",
   "type": "module",
   "private": true,
+  "homepage": "https://norm02.github.io/react-portfolio/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "@swc/register": "^0.1.10",
