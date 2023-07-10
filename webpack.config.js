@@ -6,7 +6,7 @@ const __dirname = path.dirname(__filename);
 
 export default {
   mode: "production",
-  entry: "./server/index.mjs",
+  entry: "./client/index.jsx",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "main.js",
@@ -45,5 +45,5 @@ export default {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
-  target: ["node"],
+  target: ["web"],
 };

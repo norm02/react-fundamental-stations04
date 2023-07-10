@@ -24,8 +24,9 @@ app.get("/", (req, res) => {
   </html>`;
   res.send(html);
 });
+//buildディレクトリの中身を公開する
 app.use(express.static("build"));
-
+//サーバーを起動する
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
