@@ -4,15 +4,10 @@ import React from "react";
 
 import App from "../client/App.tsx";
 
-/*
-const ReactDOMServer = require("react-dom/server");
-const express = require("express");
-
-const App = require("../client/App.tsx");
-*/
 const app = express();
 const port = process.env.PORT || 9000;
 
+//Appコンポーネントをレンダリングして、HTMLを生成する
 app.get("/", (req, res) => {
   const appContent = ReactDOMServer.renderToString(React.createElement(App));
   const html = `<!DOCTYPE html>
@@ -29,7 +24,6 @@ app.get("/", (req, res) => {
   </html>`;
   res.send(html);
 });
-
 app.use(express.static("build"));
 
 app.listen(port, () => {
